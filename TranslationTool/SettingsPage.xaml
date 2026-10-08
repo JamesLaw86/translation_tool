@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TranslationTool.SettingsPage"
+             Title="Settings">
+
+    <VerticalStackLayout Padding="16" Spacing="12">
+        <Label Text="Anthropic API key" FontAttributes="Bold" />
+        <Label Text="Create one at console.anthropic.com. It's stored encrypted on this device only."
+               FontSize="13" />
+        <Border Padding="8,0" StrokeShape="RoundRectangle 8">
+            <Entry x:Name="ApiKeyEntry"
+                   Placeholder="sk-ant-..."
+                   IsPassword="True"
+                   IsSpellCheckEnabled="False"
+                   IsTextPredictionEnabled="False" />
+        </Border>
+        <Button Text="Save" Clicked="OnSaveClicked" />
+        <Label x:Name="StatusLabel" IsVisible="False" HorizontalTextAlignment="Center" />
+    </VerticalStackLayout>
+
+</ContentPage>
